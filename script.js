@@ -11,6 +11,7 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
 
 const btnEn = document.getElementById('btn-en');
 const btnEs = document.getElementById('btn-es');
+const btnJa = document.getElementById('btn-ja');
 const heroTitle = document.getElementById('hero-title');
 const heroIntro = document.getElementById('hero-intro');
 const exploreButton = document.getElementById('explore-button');
@@ -27,4 +28,10 @@ btnEn?.addEventListener('click', () => {
   heroTitle.innerHTML = 'Handmade characters<br>with a soul.';
   heroIntro.innerHTML = 'One of a kind teddy bears<br>and art toys, created by<br>Ivana Anic.';
   exploreButton.innerHTML = 'EXPLORE MY WORK <span>→</span>';
+});
+btnJa?.addEventListener('click', () => {
+  document.documentElement.lang = 'ja';
+  heroTitle.innerHTML = '心を込めて生まれた<br>ハンドメイドの仲間たち。';
+  heroIntro.innerHTML = '世界にひとつだけのテディベアと<br>アートトイ。Ivana Anic が<br>心を込めて制作しています。';
+  exploreButton.innerHTML = '作品を見る <span>→</span>';
 });
