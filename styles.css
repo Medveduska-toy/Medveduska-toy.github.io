@@ -107,11 +107,13 @@
   }
 }
 @media (max-width: 700px) {
-  .hero-note {
-    top: 0 !important;
-    right: 0 !important;
-    font-size: 10px !important;
-  }
+ .hero-note {
+  position: absolute !important;
+  top: -110px !important;
+  right: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+}
 
   .hero-art {
     margin-top: 130px !important;
