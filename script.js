@@ -35,3 +35,33 @@ btnJa?.addEventListener('click', () => {
   heroIntro.innerHTML = '世界にひとつだけのテディベアと<br>アートトイ。Ivana Anic が<br>心を込めて制作しています。';
   exploreButton.innerHTML = '作品を見る <span>→</span>';
 });
+
+const pressDescription = document.getElementById('press-description');
+const pressButton = document.getElementById('press-button');
+
+btnEs?.addEventListener('click', () => {
+  if (pressDescription) {
+    pressDescription.innerHTML = 'Mi trabajo ha aparecido<br>en revistas internacionales.';
+  }
+  if (pressButton) {
+    pressButton.innerHTML = 'VER PUBLICACIONES <span>→</span>';
+  }
+});
+
+btnEn?.addEventListener('click', () => {
+  if (pressDescription) {
+    pressDescription.innerHTML = 'My work has been featured<br>in international magazines.';
+  }
+  if (pressButton) {
+    pressButton.innerHTML = 'VIEW ALL PRESS <span>→</span>';
+  }
+});
+
+btnJa?.addEventListener('click', () => {
+  if (pressDescription) {
+    pressDescription.innerHTML = '私の作品は<br>海外の雑誌で紹介されています。';
+  }
+  if (pressButton) {
+    pressButton.innerHTML = '掲載誌を見る <span>→</span>';
+  }
+});
