@@ -156,3 +156,16 @@
     line-height: 1.55 !important;
   }
 }
+@media (max-width: 700px) {
+  .hero-note {
+    width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-align: center !important;
+    font-size: 11px !important;
+  }
+
+  .hero-note br {
+    display: block !important;
+  }
+}
