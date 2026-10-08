@@ -163,5 +163,58 @@
     </p>
 
   </main>
+<script>
+  const aboutTranslations = {
+    en: {
+      subtitle: 'Artist & Creator of Medveduska',
+      bio: 'Ivana Anic is the artist and creator behind Medveduska, a world of handcrafted collectible teddy bears and original art toys. Her work brings together traditional craftsmanship, imagination and a distinctive artistic sensibility, giving each creation its own character and story.',
+      exhibitions: 'Exhibitions',
+      exhibitionsText: 'In 2008, Ivana held two solo exhibitions in Novi Sad, Serbia, at the National Theatre of Novi Sad and the Student Cultural Centre. Her work has also been presented in numerous group exhibitions, including MGA — Manlleu Galeria d’Art (2015–2016), in Catalonia, Spain.',
+      collaborations: 'International Collaborations',
+      collaborationsText: 'Medveduska has collaborated with independent boutiques and specialists in collectible artist bears internationally.',
+      press: 'Press & Publications',
+      pressText: "Ivana's artistic work has also been featured in publications. Discover more in the Press section of Medveduska."
+    },
+    es: {
+      subtitle: 'Artista y creadora de Medveduska',
+      bio: 'Ivana Anic es la artista y creadora de Medveduska, un universo de ositos de autor y art toys originales, elaborados a mano. Su trabajo une la artesanía tradicional, la imaginación y una sensibilidad artística propia, dando a cada creación su carácter y su historia.',
+      exhibitions: 'Exposiciones',
+      exhibitionsText: 'En 2008, Ivana realizó dos exposiciones individuales en Novi Sad, Serbia, en el Teatro Nacional de Novi Sad y el Centro Cultural de Estudiantes. También ha participado en numerosas exposiciones colectivas, entre ellas MGA — Manlleu Galeria d’Art (2015–2016), en Cataluña, España.',
+      collaborations: 'Colaboraciones internacionales',
+      collaborationsText: 'Medveduska ha colaborado internacionalmente con tiendas independientes y especialistas en ositos de autor y de colección.',
+      press: 'Prensa y publicaciones',
+      pressText: 'El trabajo artístico de Ivana también ha aparecido en diversas publicaciones. Descubre más en la sección PRESS de Medveduska.'
+    },
+    ja: {
+      subtitle: 'アーティスト・Medveduska 創設者',
+      bio: 'Ivana Anic は、手作りのコレクターズテディベアやオリジナルアートトイを制作する Medveduska のアーティストです。伝統的な手仕事と想像力、独自の芸術的感性を融合させ、一つひとつの作品に個性と物語を吹き込んでいます。',
+      exhibitions: '展覧会',
+      exhibitionsText: '2008年、セルビアのノヴィ・サドにあるセルビア国立劇場および学生文化センターで、2回の個展を開催しました。また、スペイン・カタルーニャ州の MGA — Manlleu Galeria d’Art（2015〜2016年）をはじめ、数多くのグループ展にも参加しています。',
+      collaborations: '国際的なコラボレーション',
+      collaborationsText: 'Medveduska は、世界各地の独立系ショップやアーティストベアの専門店と協力してきました。',
+      press: 'メディア掲載・出版物',
+      pressText: 'Ivana の作品はさまざまな出版物でも紹介されています。詳しくは Medveduska の PRESS セクションをご覧ください。'
+    }
+  };
+
+  const selectedLanguage = localStorage.getItem('medveduska-language') || 'en';
+  const t = aboutTranslations[selectedLanguage] || aboutTranslations.en;
+
+  document.documentElement.lang = selectedLanguage;
+
+  document.querySelector('.about-subtitle').textContent = t.subtitle;
+  document.querySelector('.about-intro-text p').textContent = t.bio;
+
+  const headings = document.querySelectorAll('.about-page h2');
+  const paragraphs = document.querySelectorAll('.about-page > p');
+
+  headings[0].textContent = t.exhibitions;
+  headings[1].textContent = t.collaborations;
+  headings[2].textContent = t.press;
+
+  paragraphs[0].textContent = t.exhibitionsText;
+  paragraphs[1].textContent = t.collaborationsText;
+  paragraphs[2].textContent = t.pressText;
+</script>
 </body>
 </html>
