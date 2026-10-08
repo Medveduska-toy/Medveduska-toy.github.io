@@ -33,7 +33,7 @@
       </div>
       <div class="hero-art">
         <img src="hero-bear.png" alt="Handmade teddy bear and a small yellow chick sitting on a complete stack of vintage books" />
-       <div class="hero-note"><p>a little friend for a big world...</p></div>
+       <div class="hero-note"><p>a little friend for<br>a big world...</p></div>
       </div>
     </section>
 
@@ -69,3 +69,15 @@
   <script src="script.js"></script>
 </body>
 </html>
+@media (max-width: 700px) {
+  .hero-note br {
+    display: initial !important;
+  }
+
+  .hero-note {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    font-size: 10px !important;
+    text-align: center !important;
+  }
+}
