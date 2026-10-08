@@ -60,3 +60,27 @@
     min-width: 0;
   }
 }
+@media (max-width: 700px) {
+  .hero.shell {
+    display: grid !important;
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+    align-items: center;
+  }
+
+  .hero-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+  }
+
+  .hero-art {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+  }
+
+  .hero-art img {
+    width: 100%;
+    height: auto;
+  }
+}
