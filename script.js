@@ -65,3 +65,11 @@ btnJa?.addEventListener('click', () => {
     pressButton.innerHTML = '掲載誌を見る <span>→</span>';
   }
 });
+// Remember the selected language across pages
+function saveLanguage(lang) {
+  localStorage.setItem('medveduska-language', lang);
+}
+
+btnEn?.addEventListener('click', () => saveLanguage('en'));
+btnEs?.addEventListener('click', () => saveLanguage('es'));
+btnJa?.addEventListener('click', () => saveLanguage('ja'));
