@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Ivana Anic | Medveduska</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .about-page {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 55px 25px 100px;
+    }
+
+    .about-back {
+      display: inline-block;
+      margin-bottom: 55px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .about-page h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 7vw, 76px);
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .about-subtitle {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 55px;
+    }
+
+    .about-page h2 {
+      font-family: Georgia, serif;
+      font-size: 27px;
+      font-weight: normal;
+      margin-top: 55px;
+      margin-bottom: 18px;
+    }
+
+    .about-page p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .about-links {
+      line-height: 2.2;
+    }
+
+    .about-links a,
+    .press-link {
+      color: inherit;
+      text-underline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="about-page">
+
+    <a class="about-back" href="index.html">← BACK TO HOME</a>
+
+    <h1>Ivana Anic</h1>
+    <div class="about-subtitle">Artist & Creator of Medveduska</div>
+
+    <p>
+      Ivana Anic is the artist and creator behind Medveduska,
+      a world of handcrafted collectible teddy bears and original
+      art toys. Her work brings together traditional craftsmanship,
+      imagination and a distinctive artistic sensibility, giving
+      each creation its own character and story.
+    </p>
+
+    <h2>Exhibitions</h2>
+
+    <p>
+      In 2008, Ivana held two solo exhibitions in Novi Sad, Serbia,
+      at the National Theatre of Novi Sad and the Student Cultural Centre.
+      Her work has also been presented in numerous group exhibitions,
+      including MGA — Manlleu Galeria d'Art (2015–2016),
+      in Catalonia, Spain.
+    </p>
+
+    <h2>International Collaborations</h2>
+
+    <p>
+      Medveduska has collaborated with independent boutiques
+      and specialists in collectible artist bears internationally.
+    </p>
+
+    <p class="about-links">
+      <a href="https://www.instagram.com/brucke_bears/" target="_blank" rel="noopener noreferrer">Brücke Bears</a> ·
+      <a href="https://www.instagram.com/bears_on_the_square/" target="_blank" rel="noopener noreferrer">Bears on the Square</a> ·
+      <a href="https://www.instagram.com/oldbrickhouse/" target="_blank" rel="noopener noreferrer">Old Brick House</a> ·
+      <a href="https://www.instagram.com/suzieetgus/" target="_blank" rel="noopener noreferrer">Suzie et Gus</a> ·
+      <a href="https://www.instagram.com/lacocotte.osaka/" target="_blank" rel="noopener noreferrer">La Cocotte Osaka</a> ·
+      <a href="https://www.instagram.com/shop.calme/" target="_blank" rel="noopener noreferrer">Shop Calme</a>
+    </p>
+
+    <h2>Press & Publications</h2>
+
+    <p>
+      Ivana's artistic work has also been featured in publications.
+      Discover more in the Press section of Medveduska.
+    </p>
+
+  </main>
+</body>
+</html>
