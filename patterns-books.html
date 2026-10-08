@@ -50,7 +50,97 @@
     <div class="books-gallery">
       <img src="bear%20book.webp" alt="Medveduska working book and teddy bear patterns">
       <img src="book.webp" alt="Teddy bear book">
-    </div>
+   <img src="workshop%20book.webp" alt="Workshop book">
+<img src="the%20secret%20language.webp" alt="The Secret Language of Teddy Bears">
+<img src="old%20bear%20pattern.webp" alt="Vintage teddy bear pattern">
+<img src="elefante.webp" alt="Elephant pattern">
+<img src="love%20potion.jpg" alt="Love Potion">
+<img src="il_1588xN.1266045738_sg4v.webp" alt="Medveduska creative work"> </div>
   </main>
-</body>
+<style>
+  .books-gallery img {
+    cursor: zoom-in;
+  }
+
+  .photo-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-viewer.open {
+    display: flex;
+  }
+
+  .photo-viewer img {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+  }
+
+  .photo-viewer button {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .viewer-close { top: 15px; right: 20px; }
+  .viewer-prev { left: 12px; }
+  .viewer-next { right: 12px; }
+</style>
+
+<div class="photo-viewer" id="photo-viewer">
+  <button class="viewer-close" aria-label="Close">×</button>
+  <button class="viewer-prev" aria-label="Previous">‹</button>
+  <img id="viewer-image" alt="Enlarged gallery photograph">
+  <button class="viewer-next" aria-label="Next">›</button>
+</div>
+
+<script>
+  const photos = Array.from(document.querySelectorAll('.books-gallery img'));
+  const viewer = document.getElementById('photo-viewer');
+  const viewerImage = document.getElementById('viewer-image');
+  let currentPhoto = 0;
+
+  function showPhoto(index) {
+    currentPhoto = (index + photos.length) % photos.length;
+    viewerImage.src = photos[currentPhoto].src;
+    viewerImage.alt = photos[currentPhoto].alt;
+    viewer.classList.add('open');
+  }
+
+  photos.forEach((photo, index) => {
+    photo.addEventListener('click', () => showPhoto(index));
+  });
+
+  document.querySelector('.viewer-close').onclick = () => {
+    viewer.classList.remove('open');
+  };
+
+  document.querySelector('.viewer-prev').onclick = () => {
+    showPhoto(currentPhoto - 1);
+  };
+
+  document.querySelector('.viewer-next').onclick = () => {
+    showPhoto(currentPhoto + 1);
+  };
+
+  viewer.addEventListener('click', event => {
+    if (event.target === viewer) viewer.classList.remove('open');
+  });
+
+  document.addEventListener('keydown', event => {
+    if (!viewer.classList.contains('open')) return;
+    if (event.key === 'Escape') viewer.classList.remove('open');
+    if (event.key === 'ArrowLeft') showPhoto(currentPhoto - 1);
+    if (event.key === 'ArrowRight') showPhoto(currentPhoto + 1);
+  });
+</script></body>
 </html>
