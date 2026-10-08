@@ -109,7 +109,7 @@
 @media (max-width: 700px) {
  .hero-note {
   position: absolute !important;
-  top: -110px !important;
+  top: -45px !important;
   right: 0 !important;
   font-size: 11px !important;
   line-height: 1.5 !important;
