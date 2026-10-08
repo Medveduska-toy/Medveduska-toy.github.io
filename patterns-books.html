@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patterns & Books | Medveduska</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .books-page {
+      padding: 55px 0 90px;
+    }
+    .books-page h1 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(36px, 6vw, 70px);
+    }
+    .books-page p {
+      max-width: 650px;
+      line-height: 1.7;
+    }
+    .books-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+    .books-gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .books-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="books-page shell">
+    <a href="index.html">← BACK TO HOME</a>
+
+    <h1>Patterns & Books</h1>
+    <p>
+      A collection of teddy bear patterns, working books,
+      sketches and creative tutorials by Medveduska.
+    </p>
+
+    <div class="books-gallery">
+      <img src="bear%20book.webp" alt="Medveduska working book and teddy bear patterns">
+    </div>
+  </main>
+</body>
+</html>
