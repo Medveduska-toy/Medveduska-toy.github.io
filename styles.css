@@ -169,3 +169,40 @@
     display: block !important;
   }
 }
+@media (max-width: 700px) {
+  .site-header {
+    grid-template-columns: auto auto 1fr !important;
+    gap: 10px !important;
+  }
+
+  .header-tools {
+    gap: 8px !important;
+    justify-content: flex-end;
+    min-width: 0;
+  }
+
+  .header-tools span {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+  }
+
+  .header-tools button {
+    font-size: 10px;
+    padding: 2px 3px;
+  }
+
+  .header-tools .instagram {
+    font-size: 20px;
+  }
+
+  .header-tools .shop-link {
+    font-size: 10px;
+  }
+
+  .brand-mobile,
+  .menu-button {
+    font-size: 10px;
+  }
+}
