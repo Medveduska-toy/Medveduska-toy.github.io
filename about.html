@@ -59,7 +59,42 @@
       color: inherit;
       text-underline-offset: 4px;
     }
-  </style>
+ .about-intro {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.about-intro-text {
+  flex: 1;
+}
+
+.about-intro-text p {
+  margin: 0;
+}
+
+.about-intro-photo {
+  width: 42%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 3px;
+}
+
+@media (max-width: 650px) {
+  .about-intro {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .about-intro-photo {
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+  }
+  }
+ </style>
 </head>
 
 <body>
@@ -69,11 +104,8 @@
 
     <h1>Ivana Anic</h1>
     <div class="about-subtitle">Artist & Creator of Medveduska</div>
-<img
-  src="ivana-anic.png"
-  alt="Ivana Anic creating a teddy bear in her studio"
-  style="display:block; width:42%; max-width:320px; height:auto; margin:15px 0 25px auto; border-radius:3px;"
->
+<div class="about-intro">
+  <div class="about-intro-text">
     <p>
       Ivana Anic is the artist and creator behind Medveduska,
       a world of handcrafted collectible teddy bears and original
@@ -81,6 +113,14 @@
       imagination and a distinctive artistic sensibility, giving
       each creation its own character and story.
     </p>
+  </div>
+
+  <img
+    src="ivana-anic.png"
+    alt="Ivana Anic creating a teddy bear in her studio"
+    class="about-intro-photo"
+  >
+</div>
 
     <h2>Exhibitions</h2>
 
