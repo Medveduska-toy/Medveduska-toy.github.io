@@ -106,3 +106,19 @@
     line-height: 1.4;
   }
 }
+@media (max-width: 700px) {
+  .hero-note {
+    top: 0 !important;
+    right: 0 !important;
+    font-size: 10px !important;
+  }
+
+  .hero-art {
+    margin-top: 130px !important;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+  }
+}
