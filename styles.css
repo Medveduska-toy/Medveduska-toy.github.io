@@ -206,3 +206,8 @@
     font-size: 10px;
   }
 }
+
+/* Mostrar completa la imagen de PORTFOLIO */
+.feature-card.portfolio-cover img {
+  object-fit: contain;
+}
