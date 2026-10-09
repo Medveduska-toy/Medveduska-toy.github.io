@@ -208,10 +208,12 @@
 }
 
 
-/* Mostrar completa la foto de PORTFOLIO */
-.feature-card[href="portfolio.html"] img {
+
+/* Mostrar completas las tres fotos de portada */
+.feature-grid .feature-card img {
   width: 100%;
   height: auto;
   aspect-ratio: auto;
   object-fit: contain;
 }
+
