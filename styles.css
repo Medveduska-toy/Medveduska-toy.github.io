@@ -207,7 +207,11 @@
   }
 }
 
-/* Mostrar completa la imagen de PORTFOLIO */
-.feature-card.portfolio-cover img {
+
+/* Mostrar completa la foto de PORTFOLIO */
+.feature-card[href="portfolio.html"] img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
   object-fit: contain;
 }
