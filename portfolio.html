@@ -95,5 +95,76 @@
 </div>
 
   </main>
+
+<style>
+.portfolio-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.portfolio-lightbox.open {
+  display: flex;
+}
+
+.portfolio-lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.portfolio-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+</style>
+
+<div class="portfolio-lightbox" id="portfolio-lightbox">
+  <button class="portfolio-lightbox-close" id="portfolio-lightbox-close" aria-label="Close image">×</button>
+  <img id="portfolio-lightbox-image" alt="Enlarged portfolio photograph">
+</div>
+
+<script>
+const portfolioImages = document.querySelectorAll('.portfolio-gallery img');
+const portfolioLightbox = document.getElementById('portfolio-lightbox');
+const portfolioLightboxImage = document.getElementById('portfolio-lightbox-image');
+
+portfolioImages.forEach(image => {
+  image.addEventListener('click', () => {
+    portfolioLightboxImage.src = image.src;
+    portfolioLightboxImage.alt = image.alt;
+    portfolioLightbox.classList.add('open');
+  });
+});
+
+function closePortfolioLightbox() {
+  portfolioLightbox.classList.remove('open');
+}
+
+document.getElementById('portfolio-lightbox-close')
+  .addEventListener('click', closePortfolioLightbox);
+
+portfolioLightbox.addEventListener('click', event => {
+  if (event.target === portfolioLightbox) closePortfolioLightbox();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closePortfolioLightbox();
+});
+</script>
+
 </body>
 </html>
